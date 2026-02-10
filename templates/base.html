@@ -1,0 +1,24 @@
+base.html
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Base</title>
+</head>
+<body>
+
+{% for mensagem in get_flashed_messages() %}
+<div class="item_lista">
+  {{mensagem}}
+</div>
+{% endfor %}
+
+  <!-- Inicio do corpo da página que sera utilizada como template -->
+  <div>
+    {% block conteudo %}
+    {% endblock conteudo %}
+  </div>
+  </body>
+</html>
